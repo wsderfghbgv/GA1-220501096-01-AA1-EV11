@@ -1,0 +1,24 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+
+# Env files
+.env
+.env.*
+
+# Virtual environments
+venv/
+.device_systems_venv/
+
+# SQLite db
+*.db
+
+# Alembic / migrations
+device_systems/venv/
+device_systems/__pycache__/
+device_systems/*.py[cod]
+device_systems/device_systems.db
+device_systems/.env
+device_systems/.env.*

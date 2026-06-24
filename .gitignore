@@ -1,0 +1,26 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+
+# Env files
+.env
+.env.*
+
+# Virtual environments
+venv/
+.device_systems_venv/
+
+# SQLite db
+*.db
+
+# Bytecode and caches
+*.pyc
+
+# IDE files
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
