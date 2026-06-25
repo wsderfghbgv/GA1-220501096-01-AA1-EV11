@@ -1,8 +1,17 @@
 # device_systems API
 
+
+
 ## Descripción
 
 **device_systems** es una API REST segura construida con **FastAPI** para la gestión de usuarios, dispositivos tecnológicos y préstamos. Esta versión (v3.0.0) incorpora mecanismos de seguridad profesional incluyendo autenticación OAuth2 con JWT, autorización basada en roles, middleware personalizado, CORS, rate limiting y validaciones avanzadas con Pydantic v2.
+
+
+# profe naviaaaaaaaaaaaa
+
+# le dejare el video en le respositorio porque grabe el video desde ubuntu porque mi windows se daño praticamnete dewscrague obs desde ubuntu y me dejo el archivo en .mp que no me deja ni guardar en drive ni subir el video a yutube
+se lo dejare en la carpeta video de sutentacion
+
 
 ## Tecnologías Utilizadas
 
@@ -261,6 +270,73 @@ La API utiliza características avanzadas de Pydantic v2:
 - **`field_validator`**: Validaciones personalizadas como fortaleza de contraseña y estados válidos.
 - **`model_validator`**: Validaciones entre campos (nombre ≠ email, IDs positivos).
 - **Schemas de respuesta**: Nunca exponen `hashed_password`.
+
+## Evidencias Fotográficas
+
+Capturas de pantalla que documentan la implementación y las pruebas de seguridad de la API, en el orden requerido por la actividad.
+
+### 1. Captura de la estructura del proyecto
+
+![Estructura del proyecto](imagenes/01_estructura_proyecto.png)
+
+### 2. Captura de migración Alembic aplicada
+
+![Migración Alembic aplicada](imagenes/02_alembic_upgrade.png)
+
+### 3. Captura del registro de usuario
+
+![Registro de usuario](imagenes/03_registro_usuario.png)
+
+### 4. Captura del login y token generado
+
+![Login — respuesta con access_token y token_type](imagenes/04_login_token.png)
+
+### 5. Captura de /auth/me
+
+![Perfil del usuario autenticado](imagenes/05_auth_me.png)
+
+> La captura muestra la consulta del perfil de usuario autenticado con respuesta `200 OK` y datos del usuario (id, name, email, role).
+
+### 6. Captura de acceso sin token
+
+![Acceso sin token — 401 Unauthorized](imagenes/06_acceso_sin_token.png)
+
+### 7. Captura de acceso con rol no permitido
+
+> **Nota:** Agregar la captura de una respuesta `403 Forbidden` al intentar una operación restringida (por ejemplo, `DELETE /devices/{id}` con rol `user`) en `imagenes/07_rol_no_permitido.png`.
+
+### 8. Captura de Swagger/OpenAPI con OAuth2
+
+![Swagger/OpenAPI — documentación general](imagenes/08_swagger_oauth2.png)
+
+![Swagger/OpenAPI — autorización OAuth2](imagenes/08b_oauth2_authorize.png)
+
+### 9. Captura de cabeceras del middleware
+
+![Cabeceras del middleware](imagenes/09_middleware_headers.png)
+
+### 10. Captura de prueba de rate limiting
+
+> **Nota:** Agregar la captura de una respuesta `429 Too Many Requests` al superar el límite de peticiones en `imagenes/10_rate_limiting.png`.
+
+### 11. Explicación de CORS configurado
+
+La configuración actual en `app/main.py` permite únicamente orígenes locales de desarrollo:
+
+```python
+allow_origins=["http://localhost:5173", "http://localhost:3000"]
+allow_credentials=True
+allow_methods=["*"]
+allow_headers=["*"]
+```
+
+En las respuestas de la API se observan cabeceras CORS como `access-control-allow-credentials: true`, lo que confirma que el middleware está activo (visible en la captura de registro de usuario).
+
+Ver también la sección [Configuración CORS](#configuración-cors) para el análisis detallado de por qué no se usa `allow_origins=["*"]` en producción.
+
+### 12. Reflexión final sobre la importancia de la seguridad en APIs REST
+
+Ver la sección [Reflexión sobre Seguridad en APIs REST](#reflexión-sobre-seguridad-en-apis-rest) al final del documento.
 
 ## Pruebas Funcionales
 

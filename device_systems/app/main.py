@@ -35,19 +35,19 @@ app = FastAPI(
     redoc_url="/redoc",
     openapi_tags=[
         {
-            "name": "Auth",
+            "name": "Autenticación",
             "description": "Endpoints de autenticación: registro, login y perfil de usuario."
         },
         {
-            "name": "Users",
+            "name": "Usuarios",
             "description": "Gestión de usuarios. Requiere autenticación."
         },
         {
-            "name": "Devices",
+            "name": "Dispositivos",
             "description": "CRUD de dispositivos tecnológicos. Operaciones protegidas por rol."
         },
         {
-            "name": "Loans",
+            "name": "Préstamos",
             "description": "Gestión de préstamos de dispositivos. Requiere autenticación."
         },
     ]

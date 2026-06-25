@@ -22,7 +22,7 @@ from app.services.device_service import (
 from app.schemas.device_schema import DeviceCreate, DeviceUpdate, DeviceResponse
 from app.models.user_model import User
 
-router = APIRouter(prefix="/devices", tags=["Devices"])
+router = APIRouter(prefix="/devices", tags=["Dispositivos"])
 
 
 @router.get(
