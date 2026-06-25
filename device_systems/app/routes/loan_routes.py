@@ -17,7 +17,7 @@ from app.services.loan_service import create_loan, return_loan, get_loan_details
 from app.schemas.loan_schema import LoanCreate, LoanResponse, LoanDetailResponse
 from app.models.user_model import User
 
-router = APIRouter(prefix="/loans", tags=["Loans"])
+router = APIRouter(prefix="/loans", tags=["Préstamos"])
 
 # Rate limiter instance
 limiter = Limiter(key_func=get_remote_address)

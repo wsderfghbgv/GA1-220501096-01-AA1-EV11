@@ -16,7 +16,7 @@ from app.schemas.auth_schema import UserRegister, UserLogin, Token
 from app.schemas.user_schema import UserResponse
 from app.models.user_model import User
 
-router = APIRouter(prefix="/auth", tags=["Auth"])
+router = APIRouter(prefix="/auth", tags=["Autenticación"])
 
 # Rate limiter instance
 limiter = Limiter(key_func=get_remote_address)

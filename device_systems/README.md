@@ -1,8 +1,17 @@
 # device_systems API
 
+
+
 ## Descripción
 
 **device_systems** es una API REST segura construida con **FastAPI** para la gestión de usuarios, dispositivos tecnológicos y préstamos. Esta versión (v3.0.0) incorpora mecanismos de seguridad profesional incluyendo autenticación OAuth2 con JWT, autorización basada en roles, middleware personalizado, CORS, rate limiting y validaciones avanzadas con Pydantic v2.
+
+
+# profe naviaaaaaaaaaaaa
+
+# le dejare el video en le respositorio porque grabe el video desde ubuntu porque mi windows se daño praticamnete dewscrague obs desde ubuntu y me dejo el archivo en .mp que no me deja ni guardar en drive ni subir el video a yutube
+se lo dejare en la carpeta video de sutentacion
+
 
 ## Tecnologías Utilizadas
 

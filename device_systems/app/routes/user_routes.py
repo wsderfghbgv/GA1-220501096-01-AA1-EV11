@@ -14,7 +14,7 @@ from app.services.user_service import get_users, get_user
 from app.schemas.user_schema import UserResponse
 from app.models.user_model import User
 
-router = APIRouter(prefix="/users", tags=["Users"])
+router = APIRouter(prefix="/users", tags=["Usuarios"])
 
 # Rate limiter instance
 limiter = Limiter(key_func=get_remote_address)
